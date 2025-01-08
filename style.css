@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f06, #4e92c7, #f9d44e); 
+    background-size: 400% 400%; 
+    animation: gradient-animation 15s ease infinite; 
+    flex-direction: column; 
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.buttons button {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+}
+
+.textArea input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 250px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.textArea input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 100px); 
+    gap: 10px; 
+    width: 90vw; 
+    height: 80vh; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px; 
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.grid-item:hover{
+    background-color: #87b7d7;
+    scale: 0.9;
+}
+
+.grid-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.grid-item span {
+    font-size: 10px;
+}
